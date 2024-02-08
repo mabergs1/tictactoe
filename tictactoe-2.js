@@ -92,14 +92,17 @@ function newGame() {
 function boardButtonClicked(button) {
 	// TODO: Complete the function
 	// 	If playerTurn is true:
+	if(playerTurn){
 
 		// Set the button's inner HTML to "X".
-
+		button.innerHTML = 'X';
 		// Add the "x" class to the button.
-
+		button.classList.add('x');
 		// Set the button's disabled attribute to true so the button cannot be clicked again.
-
+		button.disabled = true;
 		// Call switchTurn() so the computer can take a turn.
+		switchTurn();
+	}
 }
 
 function switchTurn() {
